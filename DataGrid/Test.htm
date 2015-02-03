@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>DataGrid - Demo</title>
+    <script src="jquery-1.4.1.min.js" type="text/javascript"></script>
+    <link href="DataGrid.css" rel="stylesheet" type="text/css" />
+    <script src="jQuery.Houfeng.Core.js" type="text/javascript"></script>
+    <script src="jQuery.Houfeng.Repeater.js" type="text/javascript"></script>
+    <script src="jQuery.Houfeng.DataGrid.js" type="text/javascript"></script>
+
+<style>
+.tr1
+{
+background-color:white;
+}
+.tr2
+{
+background-color:#f0f0f2;
+}
+.trhover
+{
+color:red;
+}
+</style>
+</head>
+<body>
+    <table id="test">
+        <tr class="header">
+            <td style="width: 100px;" sort='true'>
+                姓名
+            </td>
+            <td style="width: 100px;" sort='true'>
+                性别
+            </td>
+            <td style="width: 100px;" sort='true'>
+                年龄
+            </td>
+            <td style="width:200px;" sort='true'>
+                住址
+            </td>
+        </tr>
+        <tr class="itemtemplate">
+            <td editable='true'>
+                {姓名}
+            </td>
+            <td editable='true'>
+              {性别}
+            </td>
+            <td editable='true'>
+                 {年龄}
+            </td>
+            <td editable='true'>
+                  {住址}
+            </td>
+        </tr>
+    </table>
+</body>
+<script>
+    var dataJsonStr='{tablename:"",rows:[{"姓名":"曹操","性别":"男","年龄":"51","住址":"许昌"},{"姓名":"诸葛亮","性别":"男","年龄":"40","住址":"南阳"},{"姓名":"周瑜","性别":"男","年龄":"40","住址":"江东"},{"姓名":"大乔","性别":"女","年龄":"30","住址":"江东"},{"姓名":"小乔","性别":"女","年龄":"28","住址":"江东"},{"姓名":"曹操","性别":"男","年龄":"51","住址":"许昌"},{"姓名":"诸葛亮","性别":"男","年龄":"40","住址":"南阳"},{"姓名":"周瑜","性别":"男","年龄":"40","住址":"江东"},{"姓名":"大乔","性别":"女","年龄":"30","住址":"江东"},{"姓名":"小乔","性别":"女","年龄":"28","住址":"江东"}]}';
+
+    $('#test').DataGridClear();
+    $('#test').DataGridSetItemClass("tr1","tr2","trhover");
+    $('#test').DataGrid("100%",200,dataJsonStr);
+</script>
+</html>
