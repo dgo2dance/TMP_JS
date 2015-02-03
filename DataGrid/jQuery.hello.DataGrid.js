@@ -1,0 +1,9 @@
+
+/*
+ creator: duansy
+
+*/
+
+
+
+jQuery.fn.
