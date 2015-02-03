@@ -57,8 +57,29 @@
     <script src="scripts/jquery-latest.js" type="text/javascript"></script>
     <script type="text/javascript">
     $(document).ready(function(){
+    	// bind the click event
     $("#searchButton").click(function(){
-		    // alert("TEST");
+	    // alert("BEGIN AJAX");
+       $.ajax({
+       type:"post",
+       url:"YTGetJsonData.jsp",
+        data:{"TEST":"22222"},
+     //   data:$("form").serialize(),
+       dataType:"json",
+       success:function(data) {
+       	// body...
+     //  	alert("TEST");
+       	var message=data.message;
+       	alert(message);
+           },
+  
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+                        alert(XMLHttpRequest.status);
+                        alert(XMLHttpRequest.readyState);
+                        alert(textStatus);
+                    }
+       });
+   //    alert("END AJAX");
 		    });
      });
     </script>
@@ -66,10 +87,11 @@
 <body>
    <div id="searchCenter">
    	<div id="searchTabs">Search Part
-   		<input type="text"></input>
+   		<!-- <input type="text"></input> -->
     <div id="searchButton" class="button primary small" style="float:right; background-color:#F60; margin-top:5px">Search</div>
    	</div>
-   	<div id="searchFrame"><table>
+   	<div id="searchFrame">
+   		<table>
    		<tr>
    			<td>header1</td>
    			<td>header2</td>
@@ -105,7 +127,9 @@
    			<td>header4</td>
    			<td>header5</td>
    		</tr>
-   	</table></div>
+   	</table>
+ 
+   </div>
    </div>
 </body>
 </html>
