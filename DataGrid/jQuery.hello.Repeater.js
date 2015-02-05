@@ -9,7 +9,7 @@ jQuery.fn.extend({
 
 
          // RepeaterCleat:
-        RepeaterCleat:function(){
+        RepeaterClear:function(){
         this.each(function(index, val) {
         	 /* iterate through array or object */
         	 if($(this).data("_ItemTemplate")==null){

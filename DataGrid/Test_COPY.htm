@@ -3,19 +3,49 @@
 <head>
 	<meta charset="UTF-8">
 	<title>TestTable-DataGrid</title>
-    <script src="jquery-1.4.1min.js" type="text/javascript"></script>
+    <script src="jquery-1.4.1.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="DataGrid.css">
-    <script src="jQuery.hello.DataGrid.js" type="text/javascript"></script>
+    <!--
+   <script src="jQuery.hello.DataGrid.js" type="text/javascript"></script>
     <script src="jQuery.hello.Repeater.js" type="text/javascript"></script>
     <script src="jQuery.hello.Core.js" type="text/javascript"></script>
+-->
     <script type="text/javascript">
-    var dataJsonStr='{ }';
+   /*
+    var dataJsonStr='{tablename:"",
+                       rows:[
+                            {
+                             "NAME":"TEST",
+                             "GENDER":"02",
+                             "AGE":"20",
+                             "ADDRESS":"TEST"
+                            },
+                             {
+                             "NAME":"TEST05",
+                             "GENDER":"02",
+                             "AGE":"20",
+                             "ADDRESS":"TEST"
+                            }
+                       ] 
+                   }';
+                   */
+          //    $('#test').DataGridClear();
+          //    $('#test').DataGridSetItemClass("tr1","tr2","trhover");
+          //    $('#test').DataGrid("100%",200,dataJsonStr);
 
-
-
+				  $(document).ready(function(){  
+				  $("button").toggle(function(){  
+				    $("body").css("background-color","green");},  
+				    function(){  
+				    $("body").css("background-color","red");},  
+				    function(){  
+				    $("body").css("background-color","yellow");}  
+				  );  
+				});  
     </script>
 </head>
 <body>
+	<button>请点击这里，来切换不同的背景颜色</button>  
 	<table id="test">
 		<tr class="header">
 			<td style="width:100px;" sort="true">姓名</td>

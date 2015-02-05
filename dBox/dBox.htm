@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript" src="jquery-1.4.1.min.js"></script>
+    <script type="text/javascript" src="dBox.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#dbox1").dBox({ overlay: false, iframeSrc: "http://www.jb51.net" });
+            $("#dbox2,#dbox3").dBox({ iframeSrc: "http://www.jb51.net" });
+        });
+    </script>
+</head>
+<body>
+    <a href="http://www.cnblogs.com/bestfc/" id="dbox1">无遮罩</a>
+    <input type="button" id="dbox2" value="有遮罩" />
+    <select>
+        <option>看看有没有被遮掉</option>
+        <option>1</option>
+    </select>
+<div style="height:600px"></div>
+    <input type="button" id="dbox3" value="有遮罩" />
+</body>
+</html>
