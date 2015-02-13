@@ -96,10 +96,10 @@ jQuery.date() 向被选元素附加数据，或者从被选元素中获取数据
 $("#btn1").click(function(){
   $("div").data("greeting", "Hello World");
 });
+
 $("#btn2").click(function(){
   alert($("div").data("greeting"));
 });
-
 
 ----------------------
 jQuery.find() 
@@ -156,3 +156,7 @@ callback参数，为toggle函数执行
 函数说明:  如果点击了一个匹配的元素，则触发指定的第一个函数，当再次点击同一元素时，则触发指定的第二个函数。随后的每次点击都重复对这两个函数的轮番调用, 可以使用unbind("click")来删除。
 
 返回值:  jQuery
+
+
+
+------------------------
